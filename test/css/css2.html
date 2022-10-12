@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+        1. 전체 선택자 :
+            전체 태그, body, head, html 까지도 적용된다. 
+        2. 태그 선택자 : 
+            p{}
+        3. 클래스 선택자 : 
+            .title {font-size: 5px; color:red}
+        4. id 선택자 : 각각 스타일을 적용할때 */
+        #board {color: aqua;}
+        #contents { color: red;}
+       /* */
+        * {
+            /* color: aqua;
+            font-style: 20px; */
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- ★class명은 의미가 있는 이름으로 길게 해줘야 한다. -->
+    <!-- id명은 의미가 있는 으림으로 각가 다르게 해줘야 한다.(중복X) -->
+    <h1 class="title" id="board">자유게시판</h1>
+    <p class="title" id="contents">안녕하세요 내용입니다.</p>
+    <span> span 태그 입니다.</span>
+</body>
+</html>

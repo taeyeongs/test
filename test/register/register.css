@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* 초기화 코드 */
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    background: #ccc;
+    padding:20px;
+}
+
+#signup {}
+
+#signup fieldset {
+
+}
+
+#signup fieldset:last-of-type {
+
+}
+
+#signup legend {
+
+}
+
+#signup label {
+
+}
+
+#signup ul li {
+
+}
+
+#signup button {
+
+}
+
+#signup input[type=text]
+, #signup input[type=password]
+, #signup input[type=tel]
+, #signup input[type=email] {
+
+}
+
+#signup input[required] {
+
+}
+
+#signup input[read-only] {
+
+}
+
+#signup button:hover {
+
+}

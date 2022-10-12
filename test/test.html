@@ -1,13 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        /* table {border-collapse: collapse;} */
+    </style>
 </head>
 <body>
+    <h1 title="header">안녕<hr>dksd</h1>
+    <h2>안녕</h2>
+    <h3>안녕</h3>
+    <h4>안녕</h4>
     난 잘할수 있다 !!!!! 
     열심히 하자
+    <table border="1">
+        <colgroup>
+            <col>
+            <col style="background-color:red; width:100px;">
+            <col span="2" style="background-color:yellow; width:150px;text-align:center;">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>이름</th>
+                <th>내용</th>
+                <th>참고</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+    <table border="1" style="text-align: center; width:300px; height: 300px; margin: 10px;">
+        <caption>1.</caption>
+        <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <tbody>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table border="1" style="text-align: center; width:300px; height: 300px; margin: 10px;">
+        <caption>2.</caption>
+        <colgroup>
+            <col style="background-color: red;">
+            <col>
+            <col>
+        </colgroup>
+        <tbody>
+        <tr>
+            <td rowspan="3">1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <!-- <td>4</td> -->
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <!-- <td>7</td> -->
+            <td colspan="2">6</td>
+            <!-- <td>9</td> -->
+        </tr>
+        <tr>
+            <td colspan="2">7</td>
+            <!-- <td>11</td> -->
+            <td>8</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table border="1" style="text-align: center; width:300px; height: 300px; margin: 10px;">
+        <caption>3.</caption>
+        <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <tbody>
+        <tr>
+            <td colspan="3">1</td>
+            <!-- <td>2</td> -->
+            <!-- <td>3</td> -->
+        </tr>
+        <tr>
+            <td colspan="2">2</td>
+            <!-- <td>5</td> -->
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table border="1" style="text-align: center; width:300px; height: 300px; margin: 10px;">
+        <caption>4.</caption>
+        <colgroup>
+            <col>
+            <col>
+            <col>
+        </colgroup>
+        <tbody>
+        <tr>
+            <td colspan="3">1</td>
+            <!-- <td>2</td> -->
+            <!-- <td>3</td> -->
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td colspan="2">6</td>
+            <!-- <td>9</td> -->
+        </tr>
+        <tr>
+            <td colspan="3">7</td>
+            <!-- <td>11</td> -->
+            <!-- <td>12</td> -->
+        </tr>
+        </tbody>
+    </table>
 </body>
 </html>
