@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+
+        html {
+            font-size : 10px;
+        }
+
+        ul, li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color:inherit;
+        }
+
+        #wrap {
+            width:900px;
+            margin:20px auto;
+        }
+
+        #wrap table  {
+            width:100%;
+            border-collapse: collapse;
+        }
+        #wrap table td {
+            text-align: center;
+        }
+        #board_list h1 {
+            /* display: block; */
+            text-align: center;
+            padding : 30px 0 ;
+        }
+        thead th{
+            border-top:1px solid #000;
+            border-bottom:1px solid #000;
+        }
+
+        tbody tr {
+            border-bottom: 1px solid #ddd;
+        }
+        
+        #board_list th, td {
+            padding : 10px 0 ;
+        }
+
+        .bt_list{
+            text-align: right;
+            padding-top : 30px ;
+        }
+
+        .bt_list a {
+            border : 1px solid #ddd;
+            padding : 10px 20px;
+        }
+        .paging {
+            width :100%;
+            text-align: center;
+        }
+
+        #wrap a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <table id="board_list">
+            <caption><h1>자유게시판</h1></caption>
+            <thead>
+                <tr>
+                    <th>번호</th>
+                    <th>제목</th>
+                    <th>글쓴이</th>
+                    <th>작성일</th>
+                    <th>조회수</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td><a href="">제목</a></td>
+                    <td>김김김</td>
+                    <td>2022.10.11</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><a href="">제목</a></td>
+                    <td>김김김</td>
+                    <td>2022.10.11</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><a href="">제목</a></td>
+                    <td>김김김</td>
+                    <td>2022.10.11</td>
+                    <td>4</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="bt_wrap bt_list">
+            <a href="">글쓰기</a>
+        </div>
+        <div class="paging">
+            <a href="">&lt;&lt;</a>
+            <a href="">&lt;</a>
+            <a href="">1</a>
+            <a href="">2</a>
+            <a href="">3</a>
+            <a href="">&gt;</a>
+            <a href="">&gt;&gt;</a>
+        </div>
+    </div>
+</body>
+</html>
