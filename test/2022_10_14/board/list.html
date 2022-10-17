@@ -41,6 +41,7 @@
             text-align: center;
             padding : 30px 0 ;
         }
+
         thead th{
             border-top:1px solid #000;
             border-bottom:1px solid #000;
@@ -48,6 +49,10 @@
 
         tbody tr {
             border-bottom: 1px solid #ddd;
+        }
+
+        tbody tr:last-child {
+            border-bottom:1px solid #000;
         }
         
         #board_list th, td {
@@ -68,8 +73,55 @@
             text-align: center;
         }
 
+        .paging  a {
+            display: inline-block;
+            width:32px;
+            height:32px;
+            /* padding:5px; */
+            /* box-sizing: border-box; */
+            line-height: 32px;
+        }
+
+        .paging a.num.on {
+            border:1px solid #ddd;
+            background: #000;
+            color:white;
+        }
+
         #wrap a:hover {
             text-decoration: underline;
+        }
+
+        @media all and (max-width:900px) {
+            #wrap {
+                width:100vw;
+            }
+        }
+        @media all and (max-width:767px) {
+            #wrap {
+                width:95vw;
+            }
+            #board_list th:nth-of-type(1),
+            #board_list td:nth-of-type(1) {
+                display:none;
+            }
+            #board_list th:nth-of-type(2),
+            #board_list td:nth-of-type(2) {
+                width:60vw;
+            }
+            #board_list th:nth-of-type(3),
+            #board_list td:nth-of-type(3) {
+                display:none;
+            }
+
+            #board_list th:nth-of-type(4),
+            #board_list td:nth-of-type(4) {
+                width:30vw;
+            }
+            #board_list th:nth-of-type(5),
+            #board_list td:nth-of-type(5) {
+                width:10vw;
+            }
         }
     </style>
 </head>
@@ -95,14 +147,14 @@
                     <td>4</td>
                 </tr>
                 <tr>
-                    <td>1</td>
+                    <td>2</td>
                     <td><a href="">제목</a></td>
                     <td>김김김</td>
                     <td>2022.10.11</td>
                     <td>4</td>
                 </tr>
                 <tr>
-                    <td>1</td>
+                    <td>3</td>
                     <td><a href="">제목</a></td>
                     <td>김김김</td>
                     <td>2022.10.11</td>
@@ -114,13 +166,13 @@
             <a href="">글쓰기</a>
         </div>
         <div class="paging">
-            <a href="">&lt;&lt;</a>
-            <a href="">&lt;</a>
-            <a href="">1</a>
-            <a href="">2</a>
-            <a href="">3</a>
-            <a href="">&gt;</a>
-            <a href="">&gt;&gt;</a>
+            <a href="" class="first">&lt;&lt;</a>
+            <a href="" class="prev">&lt;</a>
+            <a href="" class="num on">1</a>
+            <a href="" class="num">2</a>
+            <a href="" class="num">3</a>
+            <a href="" class="next">&gt;</a>
+            <a href="" class="end">&gt;&gt;</a>
         </div>
     </div>
 </body>
