@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //2. 객체 생성자 방식
+        //객체 = 속성 + 메소드(함수)
+        // function Pet(nameVal, ageVal){
+        //     //속성
+        //     this.name = nameVal //this : 현재 있는 객체를 가르킨다
+        //     this.age = ageVal
+        //     //메소드
+        //     this.eat = function(food) {
+        //         console.log(`${this.name}이 ${food}을 먹습니다.`);
+        //     }
+        //     this.ages = () => console.log(`${this.name}의 나이는 ${this.age}입니다.`)
+        // }
+
+        // //객체 생성
+        // //객체를 쓰는 이유? 코드의 생산성이 높아진다.
+        // const pet = new Pet('구름',5);
+        // const pet2 = new Pet('별',10);
+        // const pet3 = new Pet('달',7);
+        // const pet4 = new Pet('해',9);
+
+
+        // console.log(pet.name);
+        // pet.eat('밥');
+        // pet.ages();
+        // pet2.eat('밥');
+        // pet2.ages();
+        // pet3.eat('밥');
+        // pet3.ages();
+        // pet4.eat('밥');
+        // pet4.ages();
+        // console.log(pet.name, pet.age , 1, 2, 3, '1321')
+        // console.log(pet.age)
+        // console.log(pet.kind)
+        // pet.eat('츄르');
+        // pet.sleep('츄르');
+        // pet.pleace('방바닥');
+
+
+
+        function Cat(...catName) {
+            console.log(catName);
+            this.name = catName;
+            this.cats = function (){
+                console.log(this.name.length);
+                for(let i = 0 ; i < this.name.length; i++) {
+                   // console.log(this.name, i)
+                    console.log(`고양이의 이름은 ${this.name[i]} 입니다. `);
+                }
+            }
+        }
+
+        const cat = new Cat('페르시안','러시안블루','검은고양이','이집트','흰고양이');
+
+        cat.cats();
+    </script>
+</body>
+</html>

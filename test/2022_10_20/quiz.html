@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        년도를 입력하고 윤년을 확인하는 함수를 만드시오.
+        -4로 나누어 떨어지면서 100으로 나누어 떨어지지 않는 해는 윤년
+        -또는 400으로 나누어 떨어지는 해는 윤년이다
+        */
+       
+        // const ye = function (a) {
+        //     if ((a % 4 == 0 && a % 100 == 0) || (a % 400 == 0)) {
+        //         result = '윤년';
+        //     } else {
+        //         result = '평년';
+        //     }
+
+        //     return result;
+        // }
+
+        // const input = Number(prompt('년도를 입력해주세요',0000));
+        // let cr = ye(input);
+        // document.write(cr);
+
+
+        /** 매개변수 a, b를 입력받아 a부터 b까지 더한 값을 리턴하는 함수를 만드시오. **/
+        const sum = (a,b) => {
+            a + b
+        };
+        // let result = sum(1,2);
+        // document.write(result);
+
+
+
+        /**배열을 입력받아 최소값을 구하는 함수를 만드시오.
+함수명([1,2,3,4]) */
+        const min = (a) => {
+            let tmp = a[0];
+            for(let i of a) {
+                if(i < tmp) {
+                    tmp = i;
+                }
+            }
+            console.log(tmp);
+            // Math.min(...a);
+            return tmp;
+        }
+        let ary = [9,5,1,4,7,9];
+        let result = min(ary);
+         document.write(result);
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <script>
+      //매개변수로 max(1,2,3,4)를 받아 최대값을 구하는 함수를 작성하시오
+      const max = function (...array) {
+        let out = array[0];
+        for(let i of array) {
+          if(i > out) {
+            out = i;
+          }
+        }
+        return out;
+      };
+
+      console.log(max(1, 2, 3, 4));
+    </script>
+  </head>
+  <body></body>
+</html>
