@@ -1,0 +1,341 @@
+
+----- 2022.10.06 -----
+
+용도에 맞게 쓰기 -> 레퍼런스 참고, 많은 사이트 보고 참고
+
+
+F12
+
+h1태그 -> 로고
+
+*비슷한거의 앞에건 강조용
+del 비슷한 s : 글자 중간 삭제선
+ins 비슷한 u : 아래 밑줄
+em 비슷한 i : 기울임글꼴
+strong 비슷한 b : 두껍게
+
+
+mark 글자 배경색
+small, sub, sup, s, u, ins
+
+★<ul></ul>태그 -> 메뉴 만들때 사용
+★table 태그 -> 게시판
+
+＊레이아웃 만들때 쓰는 태그 : flex, grid, float, table
+
+------ visual studio code 기능
+커서 위치에서 alt + 방향키 하면 그 줄 이동
+
+
+
+----- 2022.10.07 -----
+
+
+----- 2022.10.11 -----
+css
+인라인스타일
+내부스타일
+외부스타일
+
+tag와 element 차이
+
+전체 선택자 : * {}
+태그 선택자 : tag {}
+클래스 선택자(여러개, 한번에 여러개의 클래스를 선언할수있음) : .class .class2{}
+id 선택자(고유): #id {}
+자손 결합자 : 상위 하위
+자식 결합자 : 상위 > 하위
+인접형제 선택자(바로 뒤에 나오는 형제만 선택) : 상위 + 상위
+형제 선택자(뒤에 오는 모든 형제들 선택) : 상위 ~ 상위
+
+특정속성값이 있는 요소를 찾음
+
+
+
+과제
+1. 집에서 환경세팅 다 하기.
+2. git homework 레파지토리 만들기.
+3. homework 레파지토리에 퀴즈 푼거 정리해오기
+
+
+
+----- 2022.10.12 -----
+
+font-family :sans-serif 나 serif (꼭 붙일것 다국어 지원용)
+line-height(height와 같은 크기로하면 글자위아래가 가운데됨) 
+line-weight
+text-align
+color : hala , hal , rgb, rgba
+letter-spacing(자간) : 0 1
+word-spacing(어간) : 0 1
+
+<link>
+@import url
+@font-face
+
+list-style-type:none(없음), upper-alpha(알파벳 대문자)
+list-style-image:url()
+list-style-position : inside(들여쓰기) / outside(내여쓰기)
+
+caption-side(caption 위치지정) :
+border: solid / dashed / dotted
+border-collapse:collapse(선병합) / separate(선분리);
+border-spacing(선공간):
+
+
+블록태그 p, div 등등
+인라인태그 span 등등
+
+★-----
+block : margin과 padding을 자유롭게 지정, width / height 자유롭게 변경
+	예) div, 시멘틱태그(레이아웃), p, h1~h6, table, ul 등등등
+inline : margin과 padding을 좌우만 지정, width / height 변경불가
+	예) a, img, span, button, textarea, select, input, label등등등 
+inline-block : 기본 기능은 inline 이지만 block 기능을 쓸수있음
+
+display: block / inline / inline-block / none(안보이게)
+★-----
+
+box-sizing : content(content 영역을 기준) / border-box(테두리기준)
+
+box-shadow
+
+코딩
+예제
+내꺼 만들기()
+
+
+
+----- 2022.10.13 -----
+float: left / right
+background-image : url
+background-repeat : no-repeat / repeat ...
+background-position : left / top / center ....
+background-attachment : fixed 배경이미지 고정
+background-origin : padding-box/border-box / content-box
+background : url('images/bg4.jpg') no-repeat left top;
+background-size : auto / %, % / contain(요소 안에 배경 이미지가 다 보이도록 표시) / cover( 요소를 완전히 덮도록 배경 이미지 표시)
+
+-css-
+인라인 > 내부 > 외부 스타일 순
+id > class > 태그 선택자순
+!important 다무시하고 최우선적용
+같은 속성은 가장마지막이 적용
+해당태그 > 전체태그 순
+
+
+transform :  tanslate / scale / rotate(deg) / skew
+
+transition-property(트랜지션의 대상을 지정) : 
+transition-duration(트랜지션을 실행할 시간을 지정) : 
+transition-timing-function(트랜지션의 실행 형태를 지정) : 
+transition-delay(트랜지션의 지연 시간을 지정) : 
+transition : transition-property | transition-duration | transition-timing-function | transition-delay
+속성을 한꺼번에 지정
+
+animation --
+animation-name (@keyframes로 설정해 놓은 중간 상태를 지정) :
+animation-iteration-count(애니메이션 반복 횟수 지정):
+animation-delay : 딜레이 시간지정
+animation-direction : normal / reverse(거꾸로진행) / alternate(훌수 normal ,짝수 reverse 로 진행)
+@keyframes 이름{ from {} % {} to {}}
+animation-duration
+
+animation: 한번에 설정 예)rotate 1.5s infinite, background 1.5s infinite alternate;
+
+flex --
+display : flex
+flex-direction : row / row-reverse / column / column-reverse
+flex-wrap : nowrap(한줄)/ wrap(여러줄) / wrap-reverse(역순 여러줄) 
+flex-flow(flex-direction와 flex-wrap 를 동시에) : row wrap
+justify-content(주축(가로축)기준 배치) : flex-start / flex-end / center / space-between / space-around
+align-items(교차축(세로축)기준 배치) : flex-start/ flex-end / center / baseline(문자 기준선) / stretch
+aling-self(교차축(세로축)기준 개별지정시) : flex-start/ flex-end / center / baseline(문자 기준선) / stretch
+align-content : flex-start / flex-end / center / space-between / space-around
+flex-basis(기본크기) : 
+flex-grow(유연하게 늘리기) :  0 ~
+flex-shrink(유연하게 줄이기) : 1 ~
+flex(flex-grow, flex-shrink, flex-basis 를 한번에) :
+
+
+grid --
+grid-template-columns : (columns갯수만큼 반복 적용, 예) 200px 200px 200px) == repeat(3, 1fr)
+grid-template-rows : (rows갯수만큼 반복 적용, 예) 100px) / minmax(최소,최대)
+grid-column-gap (column 사이 간격) : 
+grid-row-gap (row 사이 간격) : 
+grid-gap : (grig-row-gap, grig-column-gap)
+grid-auto-rows
+grid-column
+grid-row
+grid-area
+
+
+시멘틱태그
+header
+nav
+section
+article
+main
+aside
+footer
+figure
+figcaption
+
+
+----- 2022.10.14 -----
+웹접근성 --
+한국형 웹 콘텐츠 접근성:https://www.wah.or.kr:444/Participation/technique.asp
+웹표준 --00
+HTML 검사: https://validator.kldp.org/
+CSS 검사: http://www.css-validator.org/validator.html.ko
+
+fixed layout
+fluid layout
+min, max
+
+viewport
+
+@media screen and ()
+
+
+----- 2022.10.17 -----
+변수를 합칠때 하나라도 문자열이면 문자열로 합쳐짐
+
+
+문자형
+숫자형
+불린형 && || ! < > == !=
+undefined, null, 빈문자열(''),  0 을 제외한 모든 것은 true 로 
+
+prompt 의 입력값은 문자열로 인식
+
+
+----- 2022.10.18 -----
+
+제어문
+if else
+switch 
+삼항연산자 (조건) ? (참이면) : (거짓) ;
+
+array -- 
+array.length
+array.push() 마지막 추가
+array.splice(인덱스 번호, 제거할 데이터갯수, 넣고싶은데이터(계속~))
+array.join("구분자") : 반환값은 문자열
+array.pop() 마지막 제거 하고 반환
+array.slice(인덱스번호부터, 인덱스번호까지(마지막 미포함))
+
+
+----- 2022.10.19 -----
+for(key in array)(key)
+for(value of array)(value)
+for(시작 ; 조건 ; 증가감)
+while(조건처리)
+do while (do 먼저 실행하고 while 조건체크)
+break
+continue
+
+
+함수정의 
+1) function sum(a, b){} 함수
+2) const sum = function(a, b){} 익명함수
+3) const sum = (a, b) => {} 애로우함수(매개변수가 하나만있으면 가로 생략가능)
+
+return
+
+
+----- 2022.10.20 -----
+네이밍 가이드 --
+카멜(변수명, 함수명) newTodoList
+케밥표기법(css) new-todo-list
+파스칼케이스(클래스명, 객체명) NewTodoList
+헝가리안 표기법(jquery)$newTodoList
+스네이크케이스(파일명)new_todo_list
+
+
+rest parameter  함수(...param) 배열로 만들어줌
+Array.isArray 배열인지 확인
+spread operator(전개 연산자) 배열을 펼쳐서 나열함 ...array
+
+
+callback함수 --
+forEach() : 
+map() : 새로운 배열을 만들어줌
+filter() : 
+
+타이머함수 -- 
+setTimeout 한번
+setInterval 여러번
+clearInterval 정지
+
+----- 2022.10.21 -----
+객체 = 속성(스펙) + 기능(함수)
+	(변수)		메소드
+
+객체 생성 -- 
+리터럴 방식
+객체 생성자 방식
+prototype
+
+
+
+다중할당 -- 
+배열기반 : let [a,b] = [1,2]
+객체기반 : let {name, type} = {name : '', type : '', weight : 1}
+
+
+Math.random();
+Math.max();
+Math.min();
+
+json --
+const obj = {
+name:'',
+type:''
+}
+
+const obj = [{
+name:'',
+type:''
+},
+{
+name:'',
+type:''
+}]
+JSON.stringify(obj) 
+
+const product = '[{"":"","":""},{"":"","":""}]'
+JSON.parse(product)
+
+
+
+얇은복사 obj2 = obj1
+깊은복사 [...obj]
+
+
+
+----- 2022.10.24 -----
+DOM -- 
+document.querySelect (하나만)
+document.querySelectorAll(해당요소 모두)
+
+textContent
+innerHTML
+
+
+dom.setAttribute('속성명', 속성값) 적용
+dom.getAttribute('속성명') 가져오기
+
+
+
+document.createElement
+
+appendChild 추가
+removeChild 삭제
+
+parentNode 부모태그 선택
+
+nextSibling//다음형제노드를 선택(줄바꿈이있으면 그걸로인식)
+
+addEventListener(이벤트추가)
+removeEventListener(이벤트 제거)
