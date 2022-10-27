@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 속성 + 메소드
+        class Petc {
+            static color = 'black' // 
+
+            // constructor 생성자 함수
+            constructor(nameVal, ageVal, catVal) {
+                //속성
+                this.name = nameVal
+                this.age = ageVal
+                this.cat = catVal
+            }
+
+            // 메소드(함수)
+            eat(food) {
+                console.log(`${this.name} 이가 ${food}를 먹습니다.`)
+            }
+
+            // 나이 출력 함수
+            agePrint() {
+                console.log(`${this.name}의 나이는 ${this.age}입니다.`)
+            }
+
+            //종 출력 함수
+            catPrint(kind) {
+                console.log(`${this.name}의 종은 ${kind}입니다.`)
+            }
+
+            static namePrint() { //정적 메소드(static 메소드)
+                console.log(this);
+                console.log(`${this.color} 입니다.`)
+            }
+        }
+
+        // const pet = new Pet('구름', 7, '코숏')
+        // const pet2 = new Pet('별', 10, '페르시안')
+
+        console.log(Petc.color)
+        console.log(Petc.namePrint())
+        // console.log(pet.name);
+        // console.log(pet.age);
+        // console.log(pet.cat);
+        // pet.eat('통조림');
+        // pet.agePrint();
+        // pet.catPrint('허스키');
+
+        // pet2.eat('통조림');
+        // pet2.agePrint();
+        // pet2.catPrint('허스키');
+    </script>
+</body>
+</html>

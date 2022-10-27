@@ -73,11 +73,19 @@ body {
     border:1px solid red;
 }
 
+/* input 에서 readonly 속성을 가진  */
 #signup input[readonly] {
     border:none;
 }
-
+/* 버튼에 마우스를 올렸을때 */
 #signup button:hover {
     background: #222;
     color: #fff;
+}
+
+#signup .alert_msg{
+    display:none;
+    font-size:0.8rem;
+    color:red;
+    padding-left:110px;
 }

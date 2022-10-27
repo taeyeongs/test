@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.1.min.js"></script>
+</head>
+<body>
+    <a href="#" target="_blank">이동</a>
+    <a href="https://www.naver.com/" target="_blank">이동</a>
+    <form action="#" id="member_f">
+        <input type="text" name="user_id" id="user_id">
+        <input type="password" name="user_pwd" id="user_pwd">
+    </form>
+    <script>
+        $(function() {
+          $('a[target]').css('border','1px solid red') 
+          $('a[href^=https]').css('border','1px solid blue') 
+
+          $('#member_f :text').css({'background-color':'blue','height':'200px'})
+          $('#member_f :password').css({'background-color':'red','height':'100px'})
+        })
+    </script>
+</body>
+</html>

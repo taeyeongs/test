@@ -339,3 +339,86 @@ nextSibling//다음형제노드를 선택(줄바꿈이있으면 그걸로인식)
 
 addEventListener(이벤트추가)
 removeEventListener(이벤트 제거)
+
+----- 2022.10.25 -----
+class -- 
+객체  : 구현할 대상 (구현전)
+인스턴스 : 구현된 구체적 실체(구현후)
+
+constructor  생성자
+extend 글래스 상속
+super 부모클래스 호출
+
+#  (private) 
+static (정적)  정적용만 불러올수있음 
+
+----- 2022.10.26 -----
+burgerking
+
+
+----- 2022.10.27 -----
+jquery
+
+    $("#title").css("color","red");
+	$('#list_1').parent().css("border","1px solid red") //부모태그
+	$('#list_1').children('.child').css("border","1px solid red")//자식태그
+	$('.child2').prev().css('border','1px solid red')//이전태그
+	$('.child2').next().css('border','1px solid blue')//이후태크
+	$('.child2').siblings().css('border','1px solid blue')//형제태그모두
+	$('.child3').prevUntil('.child1').css('border','1px solid red')
+	$('.child3').nextUntil('.child5').css('border','1px solid blue')
+	$('.child3').closest('.list_1').css('border','1px solid red')
+	$('.wrap li:first').css('border','1px solid red')
+	$('.wrap li:last').css('border','1px solid blue')
+	$('.wrap li:odd').css('border','1px solid red') //짝수
+	$('.wrap li:even').css('border','1px solid blue') //홀수
+
+	$('.list_1 span').eq(2).css('border','1px solid red')
+
+	$('.list_1 span:lt(2)').css('border','1px solid red') //보다 작은
+	$('.list_1 span:gt(2)').css('border','1px solid blue') //보다 큰
+
+	$('.list_1 span:first-of-type').css('border','1px solid red')
+	$('.list_1 span:last-of-type').css('border','1px solid blue')
+
+	$('.list_1 span:nth-child(2n-1)').css('border','1px solid red')//nth-child는 index번호가 아님
+
+	$('.list_1 span').slice(1,3).css('border','1px solid red')
+
+	var idxNum = $('li').index($(".list_1"))
+	console.log(idxNum)
+
+	var names = ["김부장","정부장","이부장"]
+	var idxNum = $.inArray('정부장', names) //배열에 value값 찾아 index 넘겨줌
+	console.log(idxNum);
+	console.log($.isArray(names));//배열유무 bool
+
+	var arr2 = $.grep(obj, function(val, idx){//javascript filter와 같은기능
+	    console.log(idx, val)
+	    if(val.area === "인천") {
+	        return true
+	    } else {
+	        return false
+	    }
+	})
+	console.log(arr2);
+
+	var arr1 = $.map(obj, function(val, idx){ //javascript map과 같은기능
+	    console.log(idx, val)
+	    if(val.area === "서울") {
+	        return val
+	    }
+	})
+
+	console.log(arr1);
+	$(obj).each(function(idx, val){
+	    console.log(idx, val)
+	})
+
+	$('.list li').each(function(idx, val){
+	    console.log(idx, val)
+	})
+
+
+
+	

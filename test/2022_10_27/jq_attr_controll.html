@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.6.1.min.js"></script>
+    <style>
+        .aqua{background-color:aqua}
+        .red{background-color:red}
+        .green{background-color:green}
+        .yellow{background-color:yellow}
+    </style>
+</head>
+<body>
+    <ul class="wrap">
+        <li class="list_1">
+            <span class="child1">1번 자식입니다.</span>
+            <span>2번 자식입니다.</span>
+            <span class="child2">3번 자식입니다.</span>
+            <span>4번 자식입니다.</span>
+            <span class="child3">5번</span>
+        </li>
+        <li class="list_2">리스트2</li>
+        <li class="list_3">리스트3</li>
+        <a href="http://www.naver.com/" target="_blank">클릭</a>
+        <p class="red">안녕하세요.안녕하세요.</p>
+    </ul>
+    <script>
+        $(function() {
+            // $("p").addClass('aqua') //class 추가
+            // $("p").removeClass('red'); //class 삭제
+            $("p").toggleClass("green") //class toggle
+            console.log($("p").hasClass("green"))
+
+            // var result = $(".list_1").html();
+            // console.log(result);
+            // $(".list_1").html('<a href="#">lnke</a>');
+
+            // var result = $(".list_1").text();
+            // console.log(result);
+            // $(".list_1").text('<a href="#">lnke</a>');
+
+            /*
+            console.log($('a').attr("href"));
+            $("a").attr("href","https://www.ezenac.co.kr");
+            $("a").attr({
+                "href":"https://www.ezenac.co.kr",
+                "target":"_parent"
+            })
+
+            $("a").removeAttr('target')
+            */
+        });
+    </script>
+</body>
+</html>
